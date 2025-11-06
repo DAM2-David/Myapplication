@@ -12,5 +12,7 @@ import es.fpsumma.dam2.myapplication.ui.screens.viewprofile.ViewProfileScreen
 fun AppNavHost(navController: NavHostController) {
     NavHost(navController = navController, startDestination = Routes.HOME) {
         composable(Routes.HOME) { HomeScreen(navController) }
+        composable(Routes.PROFILE) { ViewProfileScreen(navController) }
+        composable(Routes.EDITPROFILE) { EditProfileScreen(navController) }
     }
 }
