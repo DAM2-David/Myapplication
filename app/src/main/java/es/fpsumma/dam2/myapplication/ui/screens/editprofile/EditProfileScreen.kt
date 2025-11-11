@@ -24,15 +24,26 @@ import es.fpsumma.dam2.myapplication.ui.navigation.Routes
 fun EditProfileScreen(navController: NavController) {
 
     var nombreCompleto by remember { mutableStateOf("")}
+    var profesión by remember { mutableStateOf("")}
+    var correoElectrónico by remember { mutableStateOf("")}
+    var teléfono by remember { mutableStateOf("")}
+    var ubicación by remember { mutableStateOf("")}
+    var formaciónAcadémica by remember { mutableStateOf("")}
+
+
     Column {
         Row {
-            TextButton(onClick = ) { }
-            Text("Editar Perfil",
-                modifier = Modifier.padding(top = 50.dp))
+            TextButton(
+                onClick =
+                    { navController.navigate(Routes.PROFILE) } )
+            {
+                Text("<-",
+                    modifier = Modifier.padding(top = 50.dp))
+            }
         }
     }
 
-    Column (modifier = Modifier.padding(top = 30.dp).padding(start = 30.dp).padding(end = 30.dp)
+    Column (modifier = Modifier.padding(top = 100.dp).padding(start = 30.dp).padding(end = 30.dp)
     ){
 
 
@@ -42,7 +53,35 @@ fun EditProfileScreen(navController: NavController) {
             label = { Text("Nombre Completo") }
         )
 
+        OutlinedTextField(
+            value = profesión,
+            onValueChange = { nuevoTexto -> profesión = nuevoTexto },
+            label = { Text("Profesión") }
+        )
 
+        OutlinedTextField(
+            value = correoElectrónico,
+            onValueChange = { nuevoTexto -> correoElectrónico = nuevoTexto },
+            label = { Text("Correo electrónico") }
+        )
+
+        OutlinedTextField(
+            value = teléfono,
+            onValueChange = { nuevoTexto -> teléfono = nuevoTexto },
+            label = { Text("Teléfono") }
+        )
+
+        OutlinedTextField(
+            value = ubicación,
+            onValueChange = { nuevoTexto -> ubicación = nuevoTexto },
+            label = { Text("Ubicación") }
+        )
+
+        OutlinedTextField(
+            value = formaciónAcadémica,
+            onValueChange = { nuevoTexto -> formaciónAcadémica = nuevoTexto },
+            label = { Text("Formación Académica") }
+        )
 
 
         Button(

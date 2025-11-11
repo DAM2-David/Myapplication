@@ -18,22 +18,20 @@ import es.fpsumma.dam2.myapplication.ui.navigation.Routes
 @Composable
 fun HomeScreen(navController: NavController) {
 
-    Column {
-        Text("Hola, usuario!",
-            modifier = Modifier.padding(top = 50.dp))
+    Column (modifier = Modifier.padding(top = 50.dp).padding(start = 30.dp).padding(end = 30.dp)){
+        Text("Hola, usuario!")
         Text("Esta es tu pantalla de inicio. Desde aquí puedes acceder a diferentes secciones.",
             modifier = Modifier.padding(top = 30.dp))
 
         Card {
             Text("¿Sabías qué...?",
-                fontWeight = FontWeight.Bold)
-            Text("Puedes navegar entre pantallas usando el NavController en Compose. ¡Explora abajo!",
-                modifier = Modifier.padding(top = 30.dp).padding(start = 30.dp).padding(end = 30.dp))
+                modifier = Modifier.padding(top = 30.dp),fontWeight = FontWeight.Bold)
+            Text("Puedes navegar entre pantallas usando el NavController en Compose. ¡Explora abajo!")
         }
 
         Button(
-            onClick = { navController.navigate(Routes.EDITPROFILE) },
-            modifier = Modifier.fillMaxWidth()
+            onClick = { navController.navigate(Routes.PROFILE) },
+            modifier = Modifier.fillMaxWidth().padding(top = 30.dp)
         ) {
             Text("Ver perfil")
         }
