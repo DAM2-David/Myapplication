@@ -23,10 +23,12 @@ fun HomeScreen(navController: NavController) {
         Text("Esta es tu pantalla de inicio. Desde aquí puedes acceder a diferentes secciones.",
             modifier = Modifier.padding(top = 30.dp))
 
-        Card {
+        Card (modifier = Modifier.padding(top = 15.dp)){
             Text("¿Sabías qué...?",
-                modifier = Modifier.padding(top = 30.dp),fontWeight = FontWeight.Bold)
-            Text("Puedes navegar entre pantallas usando el NavController en Compose. ¡Explora abajo!")
+                modifier = Modifier.padding(top = 15.dp).padding(start = 15.dp).padding(end = 15.dp),
+                fontWeight = FontWeight.Bold)
+            Text("Puedes navegar entre pantallas usando el NavController en Compose. ¡Explora abajo!",
+                modifier = Modifier.padding(start = 15.dp))
         }
 
         Button(

@@ -37,56 +37,62 @@ fun EditProfileScreen(navController: NavController) {
                 onClick =
                     { navController.navigate(Routes.PROFILE) } )
             {
-                Text("<-",
+                Text("<- Editar Perfil",
                     modifier = Modifier.padding(top = 50.dp))
             }
         }
     }
 
-    Column (modifier = Modifier.padding(top = 100.dp).padding(start = 30.dp).padding(end = 30.dp)
+    Column (modifier = Modifier.padding(top = 100.dp).padding(start = 30.dp).fillMaxWidth().padding(end=30.dp)
     ){
 
 
         OutlinedTextField(
             value = nombreCompleto,
             onValueChange = { nuevoTexto -> nombreCompleto = nuevoTexto },
-            label = { Text("Nombre Completo") }
+            label = { Text("Nombre Completo") },
+            modifier = Modifier.fillMaxWidth()
         )
 
         OutlinedTextField(
             value = profesión,
             onValueChange = { nuevoTexto -> profesión = nuevoTexto },
-            label = { Text("Profesión") }
+            label = { Text("Profesión") },
+            modifier = Modifier.fillMaxWidth()
         )
 
         OutlinedTextField(
             value = correoElectrónico,
             onValueChange = { nuevoTexto -> correoElectrónico = nuevoTexto },
-            label = { Text("Correo electrónico") }
+            label = { Text("Correo electrónico") },
+            modifier = Modifier.fillMaxWidth()
         )
 
         OutlinedTextField(
             value = teléfono,
             onValueChange = { nuevoTexto -> teléfono = nuevoTexto },
-            label = { Text("Teléfono") }
+            label = { Text("Teléfono") },
+            modifier = Modifier.fillMaxWidth()
         )
 
         OutlinedTextField(
             value = ubicación,
             onValueChange = { nuevoTexto -> ubicación = nuevoTexto },
-            label = { Text("Ubicación") }
+            label = { Text("Ubicación") },
+            modifier = Modifier.fillMaxWidth()
         )
 
         OutlinedTextField(
             value = formaciónAcadémica,
             onValueChange = { nuevoTexto -> formaciónAcadémica = nuevoTexto },
-            label = { Text("Formación Académica") }
+            label = { Text("Formación Académica") },
+            modifier = Modifier.fillMaxWidth()
         )
 
 
         Button(
             onClick = { navController.navigate(Routes.PROFILE) },
-            modifier = Modifier.fillMaxWidth()
+            modifier = Modifier.fillMaxWidth().padding(top = 30.dp).padding(start = 180.dp)
         ) {
             Text("Guardar cambios")
         }
