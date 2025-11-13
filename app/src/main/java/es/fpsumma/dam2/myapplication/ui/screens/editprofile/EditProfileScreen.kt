@@ -17,6 +17,12 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import es.fpsumma.dam2.myapplication.state.ProfileState.correo
+import es.fpsumma.dam2.myapplication.state.ProfileState.formacion
+import es.fpsumma.dam2.myapplication.state.ProfileState.nombre
+import es.fpsumma.dam2.myapplication.state.ProfileState.profesion
+import es.fpsumma.dam2.myapplication.state.ProfileState.telefono
+import es.fpsumma.dam2.myapplication.state.ProfileState.ubicacion
 import es.fpsumma.dam2.myapplication.ui.navigation.Routes
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -48,43 +54,43 @@ fun EditProfileScreen(navController: NavController) {
 
 
         OutlinedTextField(
-            value = nombreCompleto,
-            onValueChange = { nuevoTexto -> nombreCompleto = nuevoTexto },
+            value = nombre,
+            onValueChange = { nuevoTexto -> nombre = nuevoTexto },
             label = { Text("Nombre Completo") },
             modifier = Modifier.fillMaxWidth()
         )
 
         OutlinedTextField(
-            value = profesión,
-            onValueChange = { nuevoTexto -> profesión = nuevoTexto },
+            value = profesion,
+            onValueChange = { nuevoTexto -> profesion = nuevoTexto },
             label = { Text("Profesión") },
             modifier = Modifier.fillMaxWidth()
         )
 
         OutlinedTextField(
-            value = correoElectrónico,
-            onValueChange = { nuevoTexto -> correoElectrónico = nuevoTexto },
+            value = correo,
+            onValueChange = { nuevoTexto -> correo = nuevoTexto },
             label = { Text("Correo electrónico") },
             modifier = Modifier.fillMaxWidth()
         )
 
         OutlinedTextField(
-            value = teléfono,
-            onValueChange = { nuevoTexto -> teléfono = nuevoTexto },
+            value = telefono,
+            onValueChange = { nuevoTexto -> telefono = nuevoTexto },
             label = { Text("Teléfono") },
             modifier = Modifier.fillMaxWidth()
         )
 
         OutlinedTextField(
-            value = ubicación,
-            onValueChange = { nuevoTexto -> ubicación = nuevoTexto },
+            value = ubicacion,
+            onValueChange = { nuevoTexto -> ubicacion = nuevoTexto },
             label = { Text("Ubicación") },
             modifier = Modifier.fillMaxWidth()
         )
 
         OutlinedTextField(
-            value = formaciónAcadémica,
-            onValueChange = { nuevoTexto -> formaciónAcadémica = nuevoTexto },
+            value = formacion,
+            onValueChange = { nuevoTexto -> formacion = nuevoTexto },
             label = { Text("Formación Académica") },
             modifier = Modifier.fillMaxWidth()
         )
